@@ -1,0 +1,22 @@
+= form_for @instruction do |f|
+  -if @instruction.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@instruction.errors.count, "error")} prohibited this instruction from being saved:"
+      %ul
+        - @instruction.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :step
+    = f.text_field :step
+  .field
+    = f.label :description
+    = f.text_area :description
+  .field
+    = f.label :recipe_id
+    = f.text_field :recipe_id
+  .field
+    = f.label :ingredient_id
+    = f.text_field :ingredient_id
+  .actions
+    = f.submit 'Save'

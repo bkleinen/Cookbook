@@ -1,0 +1,19 @@
+%h1 Listing elements
+
+%table
+  %tr
+    %th Name
+    %th
+    %th
+    %th
+
+  - @elements.each do |element|
+    %tr
+      %td= element.name
+      %td= link_to 'Show', element
+      %td= link_to 'Edit', edit_element_path(element)
+      %td= link_to 'Destroy', element, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Element', new_element_path

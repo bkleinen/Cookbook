@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name en:
+  = @food.name_en
+%p
+  %b Name de:
+  = @food.name_de
+%p
+  %b Element:
+  = @food.element_id
+
+= link_to 'Edit', edit_food_path(@food)
+\|
+= link_to 'Back', foods_path
