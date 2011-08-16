@@ -13,49 +13,49 @@
 ActiveRecord::Schema.define(:version => 20110816093133) do
 
   create_table "elements", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "foods", :force => true do |t|
-    t.string   "name_en"
-    t.string   "name_de"
-    t.integer  "element_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name_en"
+    t.string    "name_de"
+    t.integer   "element_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "ingredients", :force => true do |t|
-    t.decimal  "amount"
-    t.integer  "unit_id"
-    t.integer  "food_id"
-    t.text     "comment"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.decimal   "amount"
+    t.integer   "unit_id"
+    t.integer   "food_id"
+    t.text      "comment"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "instructions", :force => true do |t|
-    t.integer  "step"
-    t.text     "description"
-    t.integer  "recipe_id"
-    t.integer  "ingredient_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer   "step"
+    t.text      "description"
+    t.integer   "recipe_id"
+    t.integer   "ingredient_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "recipes", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.integer  "serves"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.text      "description"
+    t.integer   "serves"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "units", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
 end
