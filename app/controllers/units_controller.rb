@@ -2,6 +2,8 @@ class UnitsController < ApplicationController
   # GET /units
   # GET /units.xml
   def index
+    @title = "No Title"
+    @header = "No Header"
     @units = Unit.all
 
     respond_to do |format|
@@ -13,6 +15,8 @@ class UnitsController < ApplicationController
   # GET /units/1
   # GET /units/1.xml
   def show
+    @title = "No Title"
+    @header = "No Header"
     @unit = Unit.find(params[:id])
 
     respond_to do |format|
@@ -24,6 +28,8 @@ class UnitsController < ApplicationController
   # GET /units/new
   # GET /units/new.xml
   def new
+    @title = "No Title"
+    @header = "No Header"
     @unit = Unit.new
 
     respond_to do |format|
@@ -34,12 +40,16 @@ class UnitsController < ApplicationController
 
   # GET /units/1/edit
   def edit
+    @title = "No Title"
+    @header = "No Header"
     @unit = Unit.find(params[:id])
   end
 
   # POST /units
   # POST /units.xml
   def create
+    @title = "No Title"
+    @header = "No Header"
     @unit = Unit.new(params[:unit])
 
     respond_to do |format|
@@ -56,6 +66,8 @@ class UnitsController < ApplicationController
   # PUT /units/1
   # PUT /units/1.xml
   def update
+    @title = "No Title"
+    @header = "No Header"
     @unit = Unit.find(params[:id])
 
     respond_to do |format|
@@ -72,6 +84,8 @@ class UnitsController < ApplicationController
   # DELETE /units/1
   # DELETE /units/1.xml
   def destroy
+    @title = "No Title"
+    @header = "No Header"
     @unit = Unit.find(params[:id])
     @unit.destroy
 

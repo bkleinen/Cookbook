@@ -2,6 +2,8 @@ class InstructionsController < ApplicationController
   # GET /instructions
   # GET /instructions.xml
   def index
+    @title = "No Title"
+    @header = "No Header"
     @instructions = Instruction.all
 
     respond_to do |format|
@@ -14,7 +16,11 @@ class InstructionsController < ApplicationController
   # GET /instructions/1.xml
   def show
     @instruction = Instruction.find(params[:id])
-
+    @header = "Step "+ @instruction.step.to_s
+    if @instruction.recipe != nil
+      @header =  @instruction.recipe.name + " "+ @header
+    end
+    @title = "Recipes | "+@header
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @instruction }
@@ -24,6 +30,8 @@ class InstructionsController < ApplicationController
   # GET /instructions/new
   # GET /instructions/new.xml
   def new
+    @title = "No Title"
+    @header = "No Header"
     @instruction = Instruction.new
 
     respond_to do |format|
@@ -34,12 +42,16 @@ class InstructionsController < ApplicationController
 
   # GET /instructions/1/edit
   def edit
+    @title = "No Title"
+    @header = "No Header"
     @instruction = Instruction.find(params[:id])
   end
 
   # POST /instructions
   # POST /instructions.xml
   def create
+    @title = "No Title"
+    @header = "No Header"
     @instruction = Instruction.new(params[:instruction])
 
     respond_to do |format|
@@ -56,6 +68,8 @@ class InstructionsController < ApplicationController
   # PUT /instructions/1
   # PUT /instructions/1.xml
   def update
+    @title = "No Title"
+    @header = "No Header"
     @instruction = Instruction.find(params[:id])
 
     respond_to do |format|
@@ -72,6 +86,8 @@ class InstructionsController < ApplicationController
   # DELETE /instructions/1
   # DELETE /instructions/1.xml
   def destroy
+    @title = "No Title"
+    @header = "No Header"
     @instruction = Instruction.find(params[:id])
     @instruction.destroy
 

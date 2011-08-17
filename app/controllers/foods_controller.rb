@@ -2,8 +2,10 @@ class FoodsController < ApplicationController
   # GET /foods
   # GET /foods.xml
   def index
+    @title = "No Title"
+    @header = "No Header"
+    @navigation = "Foods"
     @foods = Food.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @foods }
@@ -13,6 +15,8 @@ class FoodsController < ApplicationController
   # GET /foods/1
   # GET /foods/1.xml
   def show
+    @title = "No Title"
+    @header = "No Header"
     @food = Food.find(params[:id])
 
     respond_to do |format|
@@ -24,6 +28,8 @@ class FoodsController < ApplicationController
   # GET /foods/new
   # GET /foods/new.xml
   def new
+    @title = "No Title"
+    @header = "No Header"
     @food = Food.new
 
     respond_to do |format|
@@ -34,12 +40,16 @@ class FoodsController < ApplicationController
 
   # GET /foods/1/edit
   def edit
+    @title = "No Title"
+    @header = "No Header"
     @food = Food.find(params[:id])
   end
 
   # POST /foods
   # POST /foods.xml
   def create
+    @title = "No Title"
+    @header = "No Header"
     @food = Food.new(params[:food])
 
     respond_to do |format|
@@ -56,6 +66,8 @@ class FoodsController < ApplicationController
   # PUT /foods/1
   # PUT /foods/1.xml
   def update
+    @title = "No Title"
+    @header = "No Header"
     @food = Food.find(params[:id])
 
     respond_to do |format|
@@ -72,6 +84,8 @@ class FoodsController < ApplicationController
   # DELETE /foods/1
   # DELETE /foods/1.xml
   def destroy
+    @title = "No Title"
+    @header = "No Header"
     @food = Food.find(params[:id])
     @food.destroy
 

@@ -19,7 +19,7 @@ require 'spec_helper'
 # that an instance is receiving a specific message.
 
 describe RecipesController do
-
+  render_views
   # This should return the minimal set of attributes required to create a valid
   # Recipe. As you add validations to Recipe, be sure to
   # update the return value of this method accordingly.
@@ -33,6 +33,12 @@ describe RecipesController do
       get :index
       assigns(:recipes).should eq([recipe])
     end
+    it "should have the right title and right header" do
+         visit recipes_path
+         page.should have_selector("title", :content => "Recipes | All")
+         page.should have_selector("h1", :content => "All Recipes")
+    end
+
   end
 
   describe "GET show" do

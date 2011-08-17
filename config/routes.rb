@@ -1,11 +1,11 @@
 Cookbook::Application.routes.draw do
 
 
-  get "pages/login"
+  get "login" => "pages#login"
 
-  get "pages/contact"
+  get "contact" => "pages#contact"
 
-  get "pages/imprint"
+  get "imprint" => "pages#imprint"
 
   resources :elements
 

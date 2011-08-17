@@ -3,7 +3,8 @@ class ElementsController < ApplicationController
   # GET /elements.xml
   def index
     @elements = Element.all
-
+    @title = "No Title"
+    @header = "No Header"
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @elements }
@@ -14,6 +15,8 @@ class ElementsController < ApplicationController
   # GET /elements/1.xml
   def show
     @element = Element.find(params[:id])
+    @title = "No Title"
+    @header = "No Header"
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,6 +28,8 @@ class ElementsController < ApplicationController
   # GET /elements/new.xml
   def new
     @element = Element.new
+    @title = "No Title"
+    @header = "No Header"
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,11 +40,15 @@ class ElementsController < ApplicationController
   # GET /elements/1/edit
   def edit
     @element = Element.find(params[:id])
+    @title = "No Title"
+    @header = "No Header"
   end
 
   # POST /elements
   # POST /elements.xml
   def create
+    @title = "No Title"
+    @header = "No Header"
     @element = Element.new(params[:element])
 
     respond_to do |format|
@@ -56,6 +65,8 @@ class ElementsController < ApplicationController
   # PUT /elements/1
   # PUT /elements/1.xml
   def update
+    @title = "No Title"
+    @header = "No Header"
     @element = Element.find(params[:id])
 
     respond_to do |format|
@@ -72,6 +83,8 @@ class ElementsController < ApplicationController
   # DELETE /elements/1
   # DELETE /elements/1.xml
   def destroy
+    @title = "No Title"
+    @header = "No Header"
     @element = Element.find(params[:id])
     @element.destroy
 

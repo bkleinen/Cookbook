@@ -2,6 +2,8 @@ class IngredientsController < ApplicationController
   # GET /ingredients
   # GET /ingredients.xml
   def index
+    @title = "No Title"
+    @header = "No Header"
     @ingredients = Ingredient.all
 
     respond_to do |format|
@@ -13,6 +15,8 @@ class IngredientsController < ApplicationController
   # GET /ingredients/1
   # GET /ingredients/1.xml
   def show
+    @title = "No Title"
+    @header = "No Header"
     @ingredient = Ingredient.find(params[:id])
 
     respond_to do |format|
@@ -24,6 +28,8 @@ class IngredientsController < ApplicationController
   # GET /ingredients/new
   # GET /ingredients/new.xml
   def new
+    @title = "No Title"
+    @header = "No Header"
     @ingredient = Ingredient.new
 
     respond_to do |format|
@@ -34,12 +40,16 @@ class IngredientsController < ApplicationController
 
   # GET /ingredients/1/edit
   def edit
+    @title = "No Title"
+    @header = "No Header"
     @ingredient = Ingredient.find(params[:id])
   end
 
   # POST /ingredients
   # POST /ingredients.xml
   def create
+    @title = "No Title"
+    @header = "No Header"
     @ingredient = Ingredient.new(params[:ingredient])
 
     respond_to do |format|
@@ -56,6 +66,8 @@ class IngredientsController < ApplicationController
   # PUT /ingredients/1
   # PUT /ingredients/1.xml
   def update
+    @title = "No Title"
+    @header = "No Header"
     @ingredient = Ingredient.find(params[:id])
 
     respond_to do |format|
@@ -72,6 +84,8 @@ class IngredientsController < ApplicationController
   # DELETE /ingredients/1
   # DELETE /ingredients/1.xml
   def destroy
+    @title = "No Title"
+    @header = "No Header"
     @ingredient = Ingredient.find(params[:id])
     @ingredient.destroy
 

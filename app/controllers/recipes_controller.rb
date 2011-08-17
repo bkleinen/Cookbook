@@ -3,7 +3,9 @@ class RecipesController < ApplicationController
   # GET /recipes.xml
   def index
     @recipes = Recipe.all
-
+    @title = "Recipes | Contact"
+    @header = "All Recipes"
+    @navigation = "Recipes"
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @recipes }
@@ -13,6 +15,8 @@ class RecipesController < ApplicationController
   # GET /recipes/1
   # GET /recipes/1.xml
   def show
+    @title = "No Title"
+    @header = "No Header"
     @recipe = Recipe.find(params[:id])
     @instructions = @recipe.instructions
 
@@ -26,6 +30,8 @@ class RecipesController < ApplicationController
   # GET /recipes/new
   # GET /recipes/new.xml
   def new
+    @title = "No Title"
+    @header = "No Header"
     @recipe = Recipe.new
 
     respond_to do |format|
@@ -36,12 +42,16 @@ class RecipesController < ApplicationController
 
   # GET /recipes/1/edit
   def edit
+    @title = "No Title"
+    @header = "No Header"
     @recipe = Recipe.find(params[:id])
   end
 
   # POST /recipes
   # POST /recipes.xml
   def create
+    @title = "No Title"
+    @header = "No Header"
     @recipe = Recipe.new(params[:recipe])
 
     respond_to do |format|
@@ -58,6 +68,8 @@ class RecipesController < ApplicationController
   # PUT /recipes/1
   # PUT /recipes/1.xml
   def update
+    @title = "No Title"
+    @header = "No Header"
     @recipe = Recipe.find(params[:id])
 
     respond_to do |format|
@@ -74,6 +86,8 @@ class RecipesController < ApplicationController
   # DELETE /recipes/1
   # DELETE /recipes/1.xml
   def destroy
+    @title = "No Title"
+    @header = "No Header"
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
 
