@@ -22,3 +22,5 @@ describe "ingredients/edit.html.haml" do
     end
   end
 end
+
+

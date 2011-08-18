@@ -5,9 +5,5 @@ describe "pages/contact.html.haml" do
     render
     rendered.should match(/Contact/i)
   end
-  it "should have the right title" do
-      render
-      visit contact_path
-      page.should have_selector("title", :content => "Recipes | Contact")
-  end
+
 end

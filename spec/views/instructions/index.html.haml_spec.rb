@@ -4,25 +4,27 @@ describe "instructions/index.html.haml" do
   before(:each) do
     assign(:instructions, [
       stub_model(Instruction,
-        :step => "",
-        :description => "",
-        :recipe_id => "",
-        :ingredient_id => 1
+        :step => "1",
+        :description => "bla",
+        :recipe_id => "2",
+        :ingredient_id => 3
       ),
       stub_model(Instruction,
-        :step => "",
-        :description => "",
-        :recipe_id => "",
-        :ingredient_id => 1
+        :step => "1",
+        :description => "bla",
+        :recipe_id => "2",
+        :ingredient_id => 3
       )
     ])
   end
 
   it "renders a list of instructions" do
     render
-    rendered.should have_selector("tr>td", :content => "".to_s, :count => 2)
-    rendered.should have_selector("tr>td", :content => "".to_s, :count => 2)
-    rendered.should have_selector("tr>td", :content => "".to_s, :count => 2)
-    rendered.should have_selector("tr>td", :content => 1.to_s, :count => 2)
+    puts rendered.class
+    puts rendered
+    assert_select("tr>td", :text => 1.to_s, :count => 2)
+    assert_select("tr>td", :text => 2.to_s, :count => 2)
+    assert_select("tr>td", :text => "bla", :count => 2)
+    assert_select("tr>td", :text => 3.to_s, :count => 2)
   end
 end
