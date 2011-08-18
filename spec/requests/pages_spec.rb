@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe "Instructions" do
-  describe "GET /instructions" do
+describe "Pages" do
+  describe "GET /pages" do
     it "works! (now write some real specs)" do
-      visit instructions_path
+      visit login_path
       response.status.should be(200)
     end
   end

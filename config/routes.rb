@@ -1,6 +1,8 @@
 Cookbook::Application.routes.draw do
 
 
+  resources :instructions
+
   get "login" => "pages#login"
 
   get "contact" => "pages#contact"
