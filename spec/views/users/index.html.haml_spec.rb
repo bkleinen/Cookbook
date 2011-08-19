@@ -12,7 +12,7 @@ describe "users/index.html.haml" do
         :single_access_token => "Single Access Token",
         :perishable_token => "Perishable Token",
         :login_count => 1,
-        :failed_login_count => 1,
+        :failed_login_count =>2,
         :current_login_ip => "Current Login Ip",
         :last_login_ip => "Last Login Ip"
       ),
@@ -25,7 +25,7 @@ describe "users/index.html.haml" do
         :single_access_token => "Single Access Token",
         :perishable_token => "Perishable Token",
         :login_count => 1,
-        :failed_login_count => 1,
+        :failed_login_count => 2,
         :current_login_ip => "Current Login Ip",
         :last_login_ip => "Last Login Ip"
       )
@@ -51,7 +51,7 @@ describe "users/index.html.haml" do
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tr>td", :text => 1.to_s, :count => 2
     # Run the generator again with the --webrat flag if you want to use webrat matchers
-    assert_select "tr>td", :text => 1.to_s, :count => 2
+    assert_select "tr>td", :text => 2.to_s, :count => 2
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tr>td", :text => "Current Login Ip".to_s, :count => 2
     # Run the generator again with the --webrat flag if you want to use webrat matchers

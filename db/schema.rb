@@ -10,52 +10,74 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110816093133) do
+ActiveRecord::Schema.define(:version => 20110819090720) do
 
   create_table "elements", :force => true do |t|
-    t.string    "name"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "foods", :force => true do |t|
-    t.string    "name_en"
-    t.string    "name_de"
-    t.integer   "element_id"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "name_en"
+    t.string   "name_de"
+    t.integer  "element_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "ingredients", :force => true do |t|
-    t.decimal   "amount"
-    t.integer   "unit_id"
-    t.integer   "food_id"
-    t.text      "comment"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.decimal  "amount"
+    t.integer  "unit_id"
+    t.integer  "food_id"
+    t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "instructions", :force => true do |t|
-    t.integer   "step"
-    t.text      "description"
-    t.integer   "recipe_id"
-    t.integer   "ingredient_id"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.integer  "step"
+    t.text     "description"
+    t.integer  "recipe_id"
+    t.integer  "ingredient_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "recipes", :force => true do |t|
-    t.string    "name"
-    t.text      "description"
-    t.integer   "serves"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "name"
+    t.text     "description"
+    t.integer  "serves"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "units", :force => true do |t|
-    t.string    "name"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_sessions", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "login",                              :null => false
+    t.string   "email",                              :null => false
+    t.string   "persistence_token",                  :null => false
+    t.string   "crypted_password",                   :null => false
+    t.string   "password_salt",                      :null => false
+    t.string   "single_access_token",                :null => false
+    t.string   "perishable_token",                   :null => false
+    t.integer  "login_count",         :default => 0, :null => false
+    t.integer  "failed_login_count",  :default => 0, :null => false
+    t.datetime "last_request_at"
+    t.datetime "current_login_at"
+    t.datetime "last_login_at"
+    t.string   "current_login_ip"
+    t.string   "last_login_ip"
   end
 
 end

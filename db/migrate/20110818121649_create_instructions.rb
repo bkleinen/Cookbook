@@ -1,9 +1,9 @@
 class CreateInstructions < ActiveRecord::Migration
   def self.up
     create_table :instructions do |t|
-      t.integer, :step
-      t.text, :description
-      t.integer, :recipe_id
+      t.integer :step
+      t.text :description
+      t.integer :recipe_id
       t.integer :ingredient_id
 
       t.timestamps
