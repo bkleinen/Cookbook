@@ -10,6 +10,7 @@ gem 'haml-rails'
 
 group :development do
     gem 'annotate', '2.4.0'
+                gem "erb2haml", "~> 0.1.2"
 
 end
 group :development, :test do

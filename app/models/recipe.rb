@@ -15,5 +15,6 @@ class Recipe < ActiveRecord::Base
   has_many :ingredients , :through => :instructions
 
   validates :name, :length => { :maximum => 140}
+  validates_presence_of :serves
 
 end

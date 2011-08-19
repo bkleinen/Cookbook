@@ -20,9 +20,22 @@ div.field, div.actions {
   margin-bottom: 10px;
 }
 
-#notice {
-  color: green;
+
+.notice {
+  color: #006400;
+  background-color:#ccffcc;
+  border: 2px solid #90ee90;
+  width: 400px;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
 }
+.notice.alert {
+  color:#8b0000;
+  border: 2px solid #f08080;
+  background-color: #ffcccc;
+}
+
 
 .field_with_errors {
   padding: 2px;

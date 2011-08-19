@@ -7,7 +7,7 @@ class FoodsController < ApplicationController
     @navigation = "Foods"
     @foods = Food.all
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index-original.html.erb
       format.xml  { render :xml => @foods }
     end
   end

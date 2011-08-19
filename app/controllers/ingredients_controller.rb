@@ -7,7 +7,7 @@ class IngredientsController < ApplicationController
     @ingredients = Ingredient.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index-original.html.erb
       format.xml  { render :xml => @ingredients }
     end
   end

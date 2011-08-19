@@ -24,7 +24,7 @@ describe RecipesController do
   # Recipe. As you add validations to Recipe, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {:serves => 4}
   end
 
   describe "GET index" do

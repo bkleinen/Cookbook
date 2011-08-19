@@ -1,0 +1,84 @@
+!!!
+%html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-type"}/
+    %title= @title
+    =render "shared/stylesheets"
+  %body
+    .page_margins
+      .page
+        #header
+          #topnav
+            / start: skip link navigation
+            %a.skip{:href => "#navigation", :title => "skip link"} Skip to the navigation
+            %span.hideme .
+            %a.skip{:href => "#content", :title => "skip link"} Skip to the content
+            %span.hideme .
+            / end: skip link navigation
+            = link_to "Login", login_path
+            | #{link_to "Contact", contact_path} | #{link_to "Imprint", imprint_path}
+          %h1= @header
+          %span YAML • (X)HTML/CSS Framework
+        #nav
+          / skiplink anchor: navigation
+          %a#navigation{:name => "navigation"}
+          .hlist
+            / main navigation: horizontal list
+            %ul
+              - @navigation = "" unless instance_variable_defined? "@navigation"
+              - if @navigation == "Recipes" then
+                %li.active
+                  %strong Recipes
+              - else
+                %li= link_to "Recipes", recipes_path
+              - if @navigation == "Foods" then
+                %li.active
+                  %strong Foods
+              - else
+                %li= link_to "Foods", foods_path
+              - if @navigation == "Elements" then
+                %li.active
+                  %strong Elements
+              - else
+                %li= link_to "Elements", elements_path
+              - if @navigation == "Instructions" then
+                %li.active
+                  %strong Instructions
+              - else
+                %li= link_to "Instructions", instructions_path
+              - if @navigation == "Ingredients" then
+                %li.active
+                  %strong Ingredients
+              - else
+                %li= link_to "Ingredients", ingredients_path
+              - if @navigation == "Units" then
+                %li.active
+                  %strong Units
+              - else
+                %li= link_to "Units", units_path
+        #main
+          #col1
+            #col1_content.clearfix
+              / add your content here left column
+              / <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.</p>
+          #col2
+            #col2_content.clearfix
+              / add your content here
+              %ul
+                %li List Item 1
+                %li List Item 2
+                %li List Item 3
+                %li List Item 4
+                %li List Item 5
+          #col3
+            #col3_content.clearfix
+              / add your content here
+              = render "shared/flash" , :flash => flash
+              = yield
+              / <p><haml:loud> debug self </haml:loud></p>
+            / IE Column Clearing
+            #ie_clearing  
+        / begin: #footer
+        #footer
+          Layout based on
+          %a{:href => "http://www.yaml.de/"} YAML

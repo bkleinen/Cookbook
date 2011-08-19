@@ -7,7 +7,7 @@ class RecipesController < ApplicationController
     @header = "All Recipes"
     @navigation = "Recipes"
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index-original.html.erb
       format.xml  { render :xml => @recipes }
     end
   end
