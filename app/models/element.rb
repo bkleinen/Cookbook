@@ -2,10 +2,10 @@
 #
 # Table name: elements
 #
-#  id         :integer         primary key
+#  id         :integer         not null, primary key
 #  name       :string(255)
-#  created_at :timestamp
-#  updated_at :timestamp
+#  created_at :datetime
+#  updated_at :datetime
 #
 
 class Element < ActiveRecord::Base

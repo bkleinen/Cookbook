@@ -2,12 +2,12 @@
 #
 # Table name: recipes
 #
-#  id          :integer         primary key
+#  id          :integer         not null, primary key
 #  name        :string(255)
 #  description :text
 #  serves      :integer
-#  created_at  :timestamp
-#  updated_at  :timestamp
+#  created_at  :datetime
+#  updated_at  :datetime
 #
 
 class Recipe < ActiveRecord::Base

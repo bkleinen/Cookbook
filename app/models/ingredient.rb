@@ -2,13 +2,13 @@
 #
 # Table name: ingredients
 #
-#  id         :integer         primary key
+#  id         :integer         not null, primary key
 #  amount     :decimal(, )
 #  unit_id    :integer
 #  food_id    :integer
 #  comment    :text
-#  created_at :timestamp
-#  updated_at :timestamp
+#  created_at :datetime
+#  updated_at :datetime
 #
 
 class Ingredient < ActiveRecord::Base
@@ -16,3 +16,4 @@ class Ingredient < ActiveRecord::Base
   belongs_to :unit
   belongs_to :food
 end
+

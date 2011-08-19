@@ -16,8 +16,11 @@
     = f.label :persistence_token
     = f.text_field :persistence_token
   .field
-    = f.label :crypted_password
-    = f.text_field :crypted_password
+    = f.label :password
+    = f.password_field :password
+  .field
+    = f.label :password_confirmation
+    = f.password_confirmation :password
   .field
     = f.label :password_salt
     = f.text_field :password_salt

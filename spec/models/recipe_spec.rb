@@ -1,15 +1,3 @@
-# == Schema Information
-#
-# Table name: recipes
-#
-#  id          :integer         primary key
-#  name        :string(255)
-#  description :text
-#  serves      :integer
-#  created_at  :timestamp
-#  updated_at  :timestamp
-#
-
 require 'spec_helper'
 
 describe Recipe do
@@ -18,3 +6,16 @@ describe Recipe do
     recipe.serves
   end
 end
+
+# == Schema Information
+#
+# Table name: recipes
+#
+#  id          :integer         not null, primary key
+#  name        :string(255)
+#  description :text
+#  serves      :integer
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
