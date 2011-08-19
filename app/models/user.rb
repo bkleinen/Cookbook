@@ -26,10 +26,9 @@ class User < ActiveRecord::Base
    config.crypto_provider = Authlogic::CryptoProviders::MD5
  end
 
-  attr_accessor :password
-  attr_accessible :password_confirmation   # accessible just from controller actions
-  @password = ""
-  @password_confirmation = ""
+  #attr_accessor :password
+  #attr_accessible :password_confirmation   # accessible just from controller actions
+
 end
 
 
