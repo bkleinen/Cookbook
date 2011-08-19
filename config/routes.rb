@@ -1,15 +1,21 @@
 Cookbook::Application.routes.draw do
 
 
-  resources :users
 
-  resources :instructions
-
-  get "login" => "pages#login"
+  # get "login" => "pages#login"
+  get "login" => "user_sessions#new"
+  get "logout" => "user_sessions#destroy"
 
   get "contact" => "pages#contact"
 
   get "imprint" => "pages#imprint"
+
+
+  resources :users
+
+  resources :user_sessions
+
+  resources :instructions
 
   resources :elements
 
@@ -22,6 +28,8 @@ Cookbook::Application.routes.draw do
   resources :instructions
 
   resources :recipes
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

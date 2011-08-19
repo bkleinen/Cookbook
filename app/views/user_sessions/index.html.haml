@@ -1,45 +1,16 @@
-%h1 Listing users
+%h1 Listing Sessions
 
 %table
   %tr
-    %th Login
-    %th Email
-    %th Persistence token
-    %th Crypted password
-    %th Password salt
-    %th Single access token
-    %th Perishable token
-    %th Login count
-    %th Failed login count
-    %th Last request at
-    %th Current login at
-    %th Last login at
-    %th Current login ip
-    %th Last login ip
-    %th
-    %th
-    %th
+    %th Username
 
-  - @users.each do |user|
+  - @user_sessions.each do |user|
     %tr
-      %td= user.login
-      %td= user.email
-      %td= user.persistence_token
-      %td= user.crypted_password
-      %td= user.password_salt
-      %td= user.single_access_token
-      %td= user.perishable_token
-      %td= user.login_count
-      %td= user.failed_login_count
-      %td= user.last_request_at
-      %td= user.current_login_at
-      %td= user.last_login_at
-      %td= user.current_login_ip
-      %td= user.last_login_ip
+      %td= user_session.username
       %td= link_to 'Show', user
-      %td= link_to 'Edit', edit_user_path(user)
+      %td= link_to 'Edit', edit_user_session_path(user)
       %td= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete
 
 %br
 
-= link_to 'New User', new_user_path
+

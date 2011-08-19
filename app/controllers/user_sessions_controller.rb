@@ -1,4 +1,12 @@
 class UserSessionsController < ApplicationController
+  def new
+    @user_session = UserSession.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => @user }
+    end
+  end
   def create
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
@@ -14,6 +22,10 @@ class UserSessionsController < ApplicationController
     @user_session.destroy
     flash[:notice] = "Successfully logged out."
     redirect_to root_url
+  end
+
+  def index
+    @user_sessions =[]
   end
 
 
