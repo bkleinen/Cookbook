@@ -7,6 +7,7 @@ gem 'rails', '3.0.9'
 
 gem 'sqlite3'
 gem 'haml-rails'
+gem 'authlogic'
 
 group :development do
     gem 'annotate', '2.4.0'

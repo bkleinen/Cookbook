@@ -1,6 +1,8 @@
 Cookbook::Application.routes.draw do
 
 
+  resources :users
+
   resources :instructions
 
   get "login" => "pages#login"
