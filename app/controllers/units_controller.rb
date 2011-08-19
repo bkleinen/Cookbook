@@ -7,7 +7,7 @@ class UnitsController < ApplicationController
     @units = Unit.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index-original.html.erb
       format.xml  { render :xml => @units }
     end
   end

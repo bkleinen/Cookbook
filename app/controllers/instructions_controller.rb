@@ -7,7 +7,7 @@ class InstructionsController < ApplicationController
     @instructions = Instruction.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index-original.html.erb
       format.xml  { render :xml => @instructions }
     end
   end
