@@ -1,9 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-    @title = "Title not set"
-    @header = "Header not set"
-
   helper_method :current_user_session, :current_user       # makes those visible in all the users
   protected
   def current_user_session

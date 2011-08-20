@@ -3,9 +3,8 @@ class RecipesController < ApplicationController
   # GET /recipes.xml
   def index
     @recipes = Recipe.all
-    @title = "Recipes | Contact"
+    @title = "Recipes"
     @header = "All Recipes"
-    @navigation = "Recipes"
     respond_to do |format|
       format.html # index-original.html.erb
       format.xml  { render :xml => @recipes }

@@ -5,6 +5,7 @@ class ElementsController < ApplicationController
     @elements = Element.all
     @title = "No Title"
     @header = "No Header"
+    @navigation = "Elements"
     respond_to do |format|
       format.html # index-original.html.erb
       format.xml  { render :xml => @elements }

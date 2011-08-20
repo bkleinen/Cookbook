@@ -1,0 +1,15 @@
+/ start: skip link navigation
+%a.skip{:href => "#navigation", :title => "skip link"} Skip to the navigation
+%span.hideme .
+%a.skip{:href => "#content", :title => "skip link"} Skip to the content
+%span.hideme .
+/ end: skip link navigation
+
+- if current_user
+  Welcome, #{current_user.greeting}!
+  | #{link_to "Edit Profile", edit_user_path(current_user)}
+  | #{link_to "Logout", logout_path}
+- else
+  = link_to "Register", new_user_path
+  | #{link_to "Login", login_path}
+| #{link_to "Imprint", imprint_path}

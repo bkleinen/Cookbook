@@ -4,6 +4,7 @@ class IngredientsController < ApplicationController
   def index
     @title = "No Title"
     @header = "No Header"
+    @navigation = "Ingredients"
     @ingredients = Ingredient.all
 
     respond_to do |format|

@@ -1,3 +1,5 @@
+- content_for :header do
+  Alle Rezepte
 %h1
 %table
   %tr
@@ -19,4 +21,12 @@
 
 %br
 
-= link_to 'New Recipe', new_recipe_path
+
+- content_for :left do
+  = link_to 'New Recipe', new_recipe_path
+- content_for :right do
+  %ul
+    %li List Item 1
+    %li List Item 1
+    %li List Item 1
+    %li List Item 1

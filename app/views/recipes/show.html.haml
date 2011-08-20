@@ -30,7 +30,12 @@
 
 %br
 
-= link_to 'New Instruction', new_instruction_path
-= link_to 'Edit', edit_recipe_path(@recipe)
-\|
-= link_to 'Back', recipes_path
+- content_for :left do
+  = link_to 'All Recipes', recipes_path
+  %br/
+  = link_to 'New Recipe', new_recipe_path
+  %br/
+  = link_to 'Edit', edit_recipe_path(@recipe)
+  %br/
+  = link_to 'New Instruction', new_instruction_path
+  %br/

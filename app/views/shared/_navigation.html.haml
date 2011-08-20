@@ -1,0 +1,15 @@
+/ skiplink anchor: navigation
+%a#navigation{:name => "navigation"}
+.hlist
+  / main navigation: horizontal list
+  %ul
+    - @navigation = "" unless instance_variable_defined? "@navigation"
+    - ["recipes","foods","elements","instructions","ingredients","units","users"].each do |controller|
+      - if params[:controller] == controller then
+        %li.active
+          %strong #{controller.capitalize}
+      - else
+        %li= link_to controller.capitalize, url_for({:controller => controller, :action => :index, :only_path => true})
+
+
+
