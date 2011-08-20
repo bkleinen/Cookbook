@@ -24,11 +24,15 @@ class User < ActiveRecord::Base
   acts_as_authentic do |config|
     # Add custom configuration options here
    config.crypto_provider = Authlogic::CryptoProviders::MD5
- end
+  end
 
-  #attr_accessor :password
-  #attr_accessible :password_confirmation   # accessible just from controller actions
-
+  def greeting
+    if first && last && !(first.empty? || last.empty?)
+      "#{first} #{last}"
+    else
+      nick
+    end
+  end
 end
 
 

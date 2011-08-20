@@ -1,6 +1,7 @@
 class UserSessionsController < ApplicationController
   before_filter :authenticate, :only => :destroy
   def new
+    @title = "Recipes | Login"
     @user_session = UserSession.new
 
     respond_to do |format|

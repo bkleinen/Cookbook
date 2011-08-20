@@ -2,23 +2,6 @@ require 'spec_helper'
 
 describe PagesController do
   render_views
-  describe "GET 'login'" do
-    it "should be successful" do
-      get 'login'
-      response.should be_success
-    end
-    it "should set variables" do
-      get 'login'
-      assigns(:title).should eq("Recipes | Login")
-    end
-  end
-  describe "pages/login.html.haml" do
-
-    it "should have the right title" do
-      visit login_path
-      page.should have_selector("title", :content => "Recipes | Login")
-    end
-  end
   describe "GET 'contact'" do
     it "should be successful" do
       get 'contact'
