@@ -5,7 +5,15 @@
       %ul
         - @user.errors.full_messages.each do |msg|
           %li= msg
-
+  .field
+    = f.label :first
+    = f.text_field :first
+  .field
+    = f.label :last
+    = f.text_field :last
+  .field
+    = f.label :nick
+    = f.text_field :nick
   .field
     = f.label :login
     = f.text_field :login

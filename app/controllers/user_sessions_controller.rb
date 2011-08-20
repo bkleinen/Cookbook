@@ -1,4 +1,5 @@
 class UserSessionsController < ApplicationController
+  before_filter :authenticate, :only => :destroy
   def new
     @user_session = UserSession.new
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110819090720) do
+ActiveRecord::Schema.define(:version => 20110819234153) do
 
   create_table "elements", :force => true do |t|
     t.string   "name"
@@ -78,6 +78,9 @@ ActiveRecord::Schema.define(:version => 20110819090720) do
     t.datetime "last_login_at"
     t.string   "current_login_ip"
     t.string   "last_login_ip"
+    t.string   "nick"
+    t.string   "first"
+    t.string   "last"
   end
 
 end

@@ -15,8 +15,13 @@
             %a.skip{:href => "#content", :title => "skip link"} Skip to the content
             %span.hideme .
             / end: skip link navigation
-            = link_to "Register", new_user_path
-            | #{link_to "Login", login_path}
+            = current_user
+            - if current_user
+              = link_to "Edit Profile", edit_user_path(current_user)
+              | #{link_to "Logout", logout_path}
+            - else
+              = link_to "Register", new_user_path
+              | #{link_to "Login", login_path}
             | #{link_to "Contact", contact_path} | #{link_to "Imprint", imprint_path}
           %h1= @header
           %span YAML • (X)HTML/CSS Framework
