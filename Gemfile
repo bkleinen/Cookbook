@@ -8,10 +8,12 @@ gem 'rails', '3.0.9'
 gem 'sqlite3'
 gem 'haml-rails'
 gem 'authlogic'
+gem 'rails3-jquery-autocomplete'
+gem 'nifty-generators'
 
 group :development do
     gem 'annotate', '2.4.0'
-                gem "erb2haml", "~> 0.1.2"
+    gem "erb2haml", "~> 0.1.2"
 
 end
 group :development, :test do

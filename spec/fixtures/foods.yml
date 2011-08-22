@@ -1,24 +1,10 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name_en: MyString
-  name_de: MyString
+  name: MyString
   element_id: 1
 
 two:
-  name_en: MyString
-  name_de: MyString
+  name: MyString
   element_id: 1
-
-# == Schema Information
-#
-# Table name: foods
-#
-#  id         :integer         not null, primary key
-#  name_en    :string(255)
-#  name_de    :string(255)
-#  element_id :integer
-#  created_at :datetime
-#  updated_at :datetime
-#
 

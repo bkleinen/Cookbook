@@ -66,6 +66,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    nifty-generators (0.4.6)
     nokogiri (1.5.0-x86-mingw32)
     polyglot (0.3.2)
     rack (1.2.3)
@@ -81,6 +82,8 @@ GEM
       activesupport (= 3.0.9)
       bundler (~> 1.0)
       railties (= 3.0.9)
+    rails3-jquery-autocomplete (0.9.1)
+      rails (~> 3.0)
     railties (3.0.9)
       actionpack (= 3.0.9)
       activesupport (= 3.0.9)
@@ -129,6 +132,8 @@ DEPENDENCIES
   capybara
   erb2haml (~> 0.1.2)
   haml-rails
+  nifty-generators
   rails (= 3.0.9)
+  rails3-jquery-autocomplete
   rspec-rails
   sqlite3

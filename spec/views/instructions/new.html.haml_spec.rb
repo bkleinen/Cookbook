@@ -16,8 +16,6 @@ describe "instructions/new.html.haml" do
     rendered.should have_selector("form", :action => instructions_path, :method => "post") do |form|
       form.should have_selector("input#instruction_step", :name => "instruction[step]")
       form.should have_selector("input#instruction_description", :name => "instruction[description]")
-      form.should have_selector("input#instruction_recipe_id", :name => "instruction[recipe_id]")
-      form.should have_selector("input#instruction_ingredient_id", :name => "instruction[ingredient_id]")
     end
   end
 end

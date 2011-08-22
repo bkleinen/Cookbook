@@ -1,13 +1,9 @@
 Cookbook::Application.routes.draw do
 
 
-
   # get "login" => "pages#login"
   get "login" => "user_sessions#new"
   get "logout" => "user_sessions#destroy"
-
-  get "contact" => "pages#contact"
-
   get "imprint" => "pages#imprint"
 
 
@@ -29,6 +25,9 @@ Cookbook::Application.routes.draw do
 
   resources :recipes
 
+  resources :ingredients do
+    get :autocomplete_food_name, :on => :collection
+  end
 
 
   # The priority is based upon order of creation:
