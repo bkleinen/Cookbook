@@ -7,13 +7,10 @@
           %li= msg
 
   .field
-    = f.label :name_en
-    = f.text_field :name_en
-  .field
-    = f.label :name_de
-    = f.text_field :name_de
+    = f.label :name
+    = f.text_field :name
   .field
     = f.label :element_id
-    = f.text_field :element_id
+    = f.collection_select :element_id, Element.find(:all), :id, :name
   .actions
     = f.submit 'Save'

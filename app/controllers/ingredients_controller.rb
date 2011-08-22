@@ -1,4 +1,5 @@
 class IngredientsController < ApplicationController
+  autocomplete :food, :name, :full => true
   # GET /ingredients
   # GET /ingredients.xml
   def index

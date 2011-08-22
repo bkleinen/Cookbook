@@ -1,0 +1,5 @@
+- unless controller.controller_name == 'pages'
+  = link_to "All #{controller.controller_name.capitalize}",url_for({:controller => controller.controller_name, :action => :index, :only_path => true})
+  %br/
+  = link_to "New #{controller.controller_name.capitalize.singularize}", url_for({:controller => controller.controller_name, :action => :new, :only_path => true})
+  %br/

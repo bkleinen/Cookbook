@@ -2,8 +2,6 @@ class InstructionsController < ApplicationController
   # GET /instructions
   # GET /instructions.xml
   def index
-    @title = "No Title"
-    @header = "No Header"
     @instructions = Instruction.all
 
     respond_to do |format|
