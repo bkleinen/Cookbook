@@ -25,9 +25,11 @@ Cookbook::Application.routes.draw do
 
   resources :recipes
 
-  resources :ingredients do
-    get :autocomplete_food_name, :on => :collection
-  end
+  resources :ingredients
+
+  get 'ingredients/autocomplete_food_name'
+    # :on => :collection
+
 
 
   # The priority is based upon order of creation:

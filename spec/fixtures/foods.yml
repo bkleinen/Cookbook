@@ -8,3 +8,15 @@ two:
   name: MyString
   element_id: 1
 
+
+# == Schema Information
+#
+# Table name: foods
+#
+#  id         :integer         not null, primary key
+#  name       :string(255)
+#  element_id :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+

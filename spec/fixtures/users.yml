@@ -32,6 +32,7 @@ two:
   current_login_ip: MyString
   last_login_ip: MyString
 
+
 # == Schema Information
 #
 # Table name: users
@@ -51,5 +52,8 @@ two:
 #  last_login_at       :datetime
 #  current_login_ip    :string(255)
 #  last_login_ip       :string(255)
+#  nick                :string(255)
+#  first               :string(255)
+#  last                :string(255)
 #
 

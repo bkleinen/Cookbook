@@ -1,3 +1,22 @@
+
+class User < ActiveRecord::Base
+  acts_as_authentic do |config|
+    # Add custom configuration options here
+   config.crypto_provider = Authlogic::CryptoProviders::MD5
+  end
+
+  def greeting
+    if first && last && !(first.empty? || last.empty?)
+      "#{first} #{last}"
+    else
+      nick
+    end
+  end
+end
+
+
+
+
 # == Schema Information
 #
 # Table name: users
@@ -17,23 +36,8 @@
 #  last_login_at       :datetime
 #  current_login_ip    :string(255)
 #  last_login_ip       :string(255)
+#  nick                :string(255)
+#  first               :string(255)
+#  last                :string(255)
 #
-
-
-class User < ActiveRecord::Base
-  acts_as_authentic do |config|
-    # Add custom configuration options here
-   config.crypto_provider = Authlogic::CryptoProviders::MD5
-  end
-
-  def greeting
-    if first && last && !(first.empty? || last.empty?)
-      "#{first} #{last}"
-    else
-      nick
-    end
-  end
-end
-
-
 
