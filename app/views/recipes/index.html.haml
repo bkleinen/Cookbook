@@ -1,10 +1,9 @@
 - content_for :header do
-  Alle Rezepte
+  All Recipes
 %h1
 %table
   %tr
     %th Name
-    %th Description
     %th Serves
     %th
     %th
@@ -12,8 +11,7 @@
 
   - @recipes.each do |recipe|
     %tr
-      %td= recipe.name
-      %td= recipe.description
+      %td= link_to recipe.name, recipe
       %td= recipe.serves
       %td= link_to 'Show', recipe
       %td= link_to 'Edit', edit_recipe_path(recipe)
