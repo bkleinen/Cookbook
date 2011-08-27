@@ -9,7 +9,7 @@ gem 'sqlite3'
 gem 'haml-rails'
 gem 'authlogic'
 gem 'rails3-jquery-autocomplete'
-gem 'nifty-generators'
+# gem 'nifty-generators'
 
 group :development do
     gem 'annotate', '2.4.0'
