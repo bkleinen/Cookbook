@@ -10,23 +10,10 @@
   %b Serves:
   = @recipe.serves
 
-%table
-  %tr
-    %th Step
-    %th Description
-    %th Ingredient
-    %th
-    %th
-    %th
+= render 'ingredients/list'
 
-  - @instructions.each do |instruction|
-    %tr
-      %td= instruction.step
-      %td= instruction.description
-      %td= instruction.ingredient_id
-      %td= link_to 'Show', instruction
-      %td= link_to 'Edit', edit_instruction_path(instruction)
-      %td= link_to 'Destroy', instruction, :confirm => 'Are you sure?', :method => :delete
+= link_to 'New Ingredient', new_ingredient_path, :recipe_id => @recipe
+
 
 %br
 
@@ -35,6 +22,6 @@
   %br/
   = link_to 'New Recipe', new_recipe_path
   %br/
-  = link_to 'New Instruction', new_instruction_path
+  = link_to 'New Ingredient', new_ingredient_path
   %br/
   = link_to 'Edit', edit_recipe_path(@recipe)

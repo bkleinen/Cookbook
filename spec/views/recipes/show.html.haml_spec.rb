@@ -7,7 +7,7 @@ describe "recipes/show.html.haml" do
       :description => "MyText",
       :serves => 1
     ))
-    @instructions = []
+    @ingredients = []
   end
 
   it "renders attributes in <p>" do

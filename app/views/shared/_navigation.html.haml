@@ -4,7 +4,7 @@
   / main navigation: horizontal list
   %ul
     - @navigation = "" unless instance_variable_defined? "@navigation"
-    - ["recipes","foods","elements","instructions","ingredients","units","users"].each do |controller|
+    - ["recipes","foods","elements","ingredients","units","users"].each do |controller|
       - if params[:controller] == controller then
         %li.active
           %strong #{controller.capitalize}

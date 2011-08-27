@@ -1,0 +1,22 @@
+%table
+  %tr
+    %th Recipe
+    %th Step
+    %th Amount
+    %th Unit
+    %th Food
+    %th Comment
+    %th
+    %th
+    %th
+  - @ingredients.each do |ingredient|
+    %tr
+      %td= ingredient.recipe_id
+      %td= ingredient.step
+      %td= ingredient.amount
+      %td= ingredient.unit_name
+      %td= ingredient.food_name
+      %td= ingredient.comment
+      %td= link_to 'Show', ingredient
+      %td= link_to 'Edit', edit_ingredient_path(ingredient)
+      %td= link_to 'Destroy', ingredient, :confirm => 'Are you sure?', :method => :delete

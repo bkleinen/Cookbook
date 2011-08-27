@@ -14,10 +14,8 @@ class RecipesController < ApplicationController
   # GET /recipes/1
   # GET /recipes/1.xml
   def show
-    @title = "No Title"
-    @header = "No Header"
     @recipe = Recipe.find(params[:id])
-    @instructions = @recipe.instructions
+    @ingredients = @recipe.ingredients
 
 
     respond_to do |format|

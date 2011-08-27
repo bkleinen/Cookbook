@@ -1,7 +1,7 @@
 class AddRecipeIdStepToIngredients < ActiveRecord::Migration
   def self.up
     add_column :ingredients , :step, :integer
-    add.column :ingredients, :recipe_id, :integer
+    add_column :ingredients, :recipe_id, :integer
   end
 
   def self.down
