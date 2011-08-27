@@ -12,16 +12,14 @@
   - @recipes.each do |recipe|
     %tr
       %td= link_to recipe.name, recipe
-      %td= recipe.serves
-      %td= link_to 'Show', recipe
+      %td= link_to recipe.serves, recipe
       %td= link_to 'Edit', edit_recipe_path(recipe)
       %td= link_to 'Destroy', recipe, :confirm => 'Are you sure?', :method => :delete
 
 %br
+= link_to 'New Recipe', new_recipe_path
 
 
-- content_for :left do
-  = link_to 'New Recipe', new_recipe_path
 - content_for :right do
   %ul
     %li List Item 1

@@ -5,10 +5,10 @@
   = @ingredient.amount
 %p
   %b Unit:
-  = @ingredient.unit_id
+  = @ingredient.unit.name if @ingredient.unit
 %p
   %b Food:
-  = @ingredient.food_id
+  = @ingredient.food.name if @ingredient.food
 %p
   %b Comment:
   = @ingredient.comment

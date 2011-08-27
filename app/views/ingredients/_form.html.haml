@@ -10,8 +10,9 @@
     = f.label :amount
     = f.text_field :amount
   .field
-    = f.label :unit_id
-    = f.text_field :unit_id
+    = f.label :unit_name
+    = f.text_field :unit_name, :autocomplete => ingredients_autocomplete_unit_name_path
+
   .field
     = f.label :food_name
     = f.text_field :food_name, :autocomplete => ingredients_autocomplete_food_name_path

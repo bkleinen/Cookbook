@@ -40,7 +40,6 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.xml
   def create
-    puts params
     @user = User.new(params[:user])
 
     respond_to do |format|

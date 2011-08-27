@@ -28,7 +28,8 @@ Cookbook::Application.routes.draw do
   resources :ingredients
 
   get 'ingredients/autocomplete_food_name'
-    # :on => :collection
+  get 'ingredients/autocomplete_unit_name'
+      # :on => :collection
 
 
 

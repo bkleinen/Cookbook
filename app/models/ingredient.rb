@@ -16,12 +16,22 @@ class Ingredient < ActiveRecord::Base
   belongs_to :unit
   belongs_to :food
 
+  validates_presence_of :unit_id
+  validates_presence_of :food_id
+  validates_presence_of :amount
+
 
   def food_name
     food.name if food
   end
+  def unit_name
+    unit.name if unit
+  end
   def food_name=(name)
       self.food = Food.find_or_create_by_name(name) unless name.blank?
+  end
+  def unit_name=(name)
+      self.unit = Unit.find_or_create_by_name(name) unless name.blank?
   end
 end
 

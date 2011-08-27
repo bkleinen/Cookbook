@@ -20,8 +20,6 @@ describe "instructions/index.html.haml" do
 
   it "renders a list of instructions" do
     render
-    puts rendered.class
-    puts rendered
     assert_select("tr>td", :text => 1.to_s, :count => 2)
     assert_select("tr>td", :text => 2.to_s, :count => 2)
     assert_select("tr>td", :text => "bla", :count => 2)

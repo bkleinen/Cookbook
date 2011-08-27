@@ -24,7 +24,12 @@ describe IngredientsController do
   # Ingredient. As you add validations to Ingredient, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {
+        :amount => 100,
+        :unit_id => 1,
+        :food_id => 1,
+        :comment => "my comment"
+  }
   end
 
   describe "GET index" do

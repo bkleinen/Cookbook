@@ -5,7 +5,7 @@
   = @food.name
 %p
   %b Element:
-  = @food.element_id
+  = @food.element ? @food.element.name : (link_to 'please specify!', edit_food_path(@food))
 
 = link_to 'Edit', edit_food_path(@food)
 \|
