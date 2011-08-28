@@ -1,0 +1,17 @@
+%table
+  %tr
+    %th Name
+    %th Serves
+    %th Created By
+    %th
+    %th
+    %th
+
+  - @recipes.each do |recipe|
+    %tr
+      %td= link_to recipe.name, recipe
+      %td= link_to recipe.serves, recipe
+      %td= recipe.user ? (link_to recipe.user.nick, recipe.user) : ""
+      %td= link_to 'Show', recipe
+      %td= link_to 'Edit', edit_recipe_path(recipe)
+      %td= link_to 'Destroy', recipe, :confirm => 'Are you sure?', :method => :delete

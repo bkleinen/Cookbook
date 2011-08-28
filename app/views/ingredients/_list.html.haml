@@ -5,17 +5,19 @@
     %th Amount
     %th Unit
     %th Food
+    %th Element
     %th Comment
     %th
     %th
     %th
   - @ingredients.each do |ingredient|
     %tr
-      %td= ingredient.recipe_id
+      %td= ingredient.recipe.name
       %td= ingredient.step
       %td= ingredient.amount
       %td= ingredient.unit_name
       %td= ingredient.food_name
+      %td= ingredient.element_name
       %td= ingredient.comment
       %td= link_to 'Show', ingredient
       %td= link_to 'Edit', edit_ingredient_path(ingredient)

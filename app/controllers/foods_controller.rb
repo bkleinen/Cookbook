@@ -15,9 +15,8 @@ class FoodsController < ApplicationController
   # GET /foods/1
   # GET /foods/1.xml
   def show
-    @title = "No Title"
-    @header = "No Header"
     @food = Food.find(params[:id])
+    @recipes = @food.recipes.sort.uniq
 
     respond_to do |format|
       format.html # show.html.erb
@@ -28,10 +27,7 @@ class FoodsController < ApplicationController
   # GET /foods/new
   # GET /foods/new.xml
   def new
-    @title = "No Title"
-    @header = "No Header"
     @food = Food.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @food }

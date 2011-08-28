@@ -11,7 +11,8 @@
     = f.text_field :step
   .field
     = f.label :recipe_id
-    = f.text_field :recipe_id
+    = f.hidden_field :recipe_id, {:value => @recipe.id}
+    = @recipe.name
   .field
     = f.label :amount
     = f.text_field :amount

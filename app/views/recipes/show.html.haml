@@ -15,7 +15,7 @@
 
 = render 'ingredients/list'
 
-= link_to 'New Ingredient', new_ingredient_path, :recipe_id => @recipe
+= link_to 'New Ingredient', new_recipe_ingredient_path(:recipe_id => @recipe)
 
 
 %br
@@ -25,6 +25,6 @@
   %br/
   = link_to 'New Recipe', new_recipe_path
   %br/
-  = link_to 'New Ingredient', new_ingredient_path
+  = link_to 'New Ingredient', new_recipe_ingredient_path(:recipe_id => @recipe)
   %br/
   = link_to 'Edit', edit_recipe_path(@recipe)

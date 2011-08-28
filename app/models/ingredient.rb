@@ -20,6 +20,9 @@ class Ingredient < ActiveRecord::Base
   def unit_name=(name)
       self.unit = Unit.find_or_create_by_name(name) unless name.blank?
   end
+  def element_name
+    food.element.name if food && food.element
+  end
 end
 
 

@@ -2,7 +2,7 @@
 
 %p
   %b Recipe:
-  = @ingredient.recipe_id
+  = link_to @recipe.name, @recipe
 %p
   %b Step:
   = @ingredient.step
@@ -11,14 +11,16 @@
   = @ingredient.amount
 %p
   %b Unit:
-  = @ingredient.unit.name if @ingredient.unit
+  = (link_to @ingredient.unit.name, @ingredient.unit) if @ingredient.unit
 %p
   %b Food:
-  = @ingredient.food.name if @ingredient.food
+  = (link_to @ingredient.food.name, @ingredient.food) if @ingredient.food
 %p
   %b Comment:
   = @ingredient.comment
 
-= link_to 'Edit', edit_ingredient_path(@ingredient)
+= link_to 'Edit', edit_recipe_ingredient_path(@recipe, @ingredient)
 \|
-= link_to 'Back', ingredients_path
+= link_to 'Back', recipe_ingredient_path(@recipe)
+\|
+= link_to 'Create Next Ingredient', new_recipe_ingredient_path(@recipe)

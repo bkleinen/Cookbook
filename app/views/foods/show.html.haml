@@ -7,6 +7,9 @@
   %b Element:
   = @food.element ? @food.element.name : (link_to 'please specify!', edit_food_path(@food))
 
+%p
+  %b Used in Recipes:
+  = render 'recipes/list'
 = link_to 'Edit', edit_food_path(@food)
 \|
 = link_to 'Back', foods_path

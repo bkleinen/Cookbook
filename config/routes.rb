@@ -21,11 +21,9 @@ Cookbook::Application.routes.draw do
 
   resources :ingredients
 
-  resources :instructions
-
-  resources :recipes
-
-  resources :ingredients
+  resources :recipes do
+    resources :ingredients
+  end
 
   get 'ingredients/autocomplete_food_name'
   get 'ingredients/autocomplete_unit_name'
