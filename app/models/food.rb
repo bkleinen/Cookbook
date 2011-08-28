@@ -1,7 +1,6 @@
 class Food < ActiveRecord::Base
   has_many :ingredients
-  has_many :instructions, :through => :ingredients
-  has_many :recipes, :through => :instructions
+  has_many :recipes, :through => :ingredients
   belongs_to :element
 
 end

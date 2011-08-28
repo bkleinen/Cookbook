@@ -11,7 +11,7 @@
   - @foods.each do |food|
     %tr
       %td= food.name
-      %td= food.element.name if food.element
+      %td= food.element ? food.element.name : (link_to 'please specify!', edit_food_path(food))
       %td= link_to 'Show', food
       %td= link_to 'Edit', edit_food_path(food)
       %td= link_to 'Destroy', food, :confirm => 'Are you sure?', :method => :delete

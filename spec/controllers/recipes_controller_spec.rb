@@ -47,10 +47,10 @@ describe RecipesController do
       get :show, :id => recipe.id.to_s
       assigns(:recipe).should eq(recipe)
     end
-    it "should assign the recipe instructions as @instructions" do
+    it "should assign the recipe ingredients as @ingredients" do
       recipe = Recipe.create! valid_attributes
       get :show, :id => recipe.id.to_s
-      assigns(:instructions).should eq(recipe.instructions)
+      assigns(:ingredients).should eq(recipe.ingredients)
     end
   end
 
