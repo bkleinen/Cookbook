@@ -7,6 +7,7 @@ describe Recipe do
   end
 end
 
+
 # == Schema Information
 #
 # Table name: recipes
@@ -17,5 +18,6 @@ end
 #  serves      :integer
 #  created_at  :datetime
 #  updated_at  :datetime
+#  user_id     :integer
 #
 

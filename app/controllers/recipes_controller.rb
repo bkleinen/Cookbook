@@ -3,8 +3,6 @@ class RecipesController < ApplicationController
   # GET /recipes.xml
   def index
     @recipes = Recipe.all
-    @title = "Recipes"
-    @header = "All Recipes"
     respond_to do |format|
       format.html # index-original.html.erb
       format.xml  { render :xml => @recipes }
@@ -15,6 +13,7 @@ class RecipesController < ApplicationController
   # GET /recipes/1.xml
   def show
     @recipe = Recipe.find(params[:id])
+    @user = @recipe.user
     @ingredients = @recipe.ingredients
 
 
@@ -47,9 +46,8 @@ class RecipesController < ApplicationController
   # POST /recipes
   # POST /recipes.xml
   def create
-    @title = "No Title"
-    @header = "No Header"
     @recipe = Recipe.new(params[:recipe])
+    @recipe.user_id = current_user.id if current_user
 
     respond_to do |format|
       if @recipe.save

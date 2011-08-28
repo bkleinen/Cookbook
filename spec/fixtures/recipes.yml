@@ -10,6 +10,7 @@ two:
   description: MyText
   serves: 1
 
+
 # == Schema Information
 #
 # Table name: recipes
@@ -20,5 +21,6 @@ two:
 #  serves      :integer
 #  created_at  :datetime
 #  updated_at  :datetime
+#  user_id     :integer
 #
 

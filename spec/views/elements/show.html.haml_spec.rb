@@ -5,6 +5,7 @@ describe "elements/show.html.haml" do
     @element = assign(:element, stub_model(Element,
       :name => "Name"
     ))
+    @foods = []
   end
 
   it "renders attributes in <p>" do

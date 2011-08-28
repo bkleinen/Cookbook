@@ -4,6 +4,9 @@
   %b Name:
   = @recipe.name
 %p
+  %b Created By:
+  = (link_to @user.nick, user_path(@user)) if @user
+%p
   %b Description:
   = @recipe.description
 %p
